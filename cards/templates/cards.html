@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<div>
+    {% for card in cards %}
+        {% if card.suit == 1  %}
+        <p>This is a club</p>
+        <p>{{ forloop.counter }}Suit: {{ card.get_suit_display }}, Rank: {{ card.rank }}</p>
+        {% elif card.suit == 2 %}
+        <p>This is a diamond</p>
+        <p>{{ forloop.counter }}Suit: {{ card.get_suit_display }}, Rank: {{ card.rank }}</p>
+        {% elif card.suit == 3 %}
+        <p>This is a heart</p>
+        <p>{{ forloop.counter }}Suit: {{ card.get_suit_display }}, Rank: {{ card.rank }}</p>
+        {% endif %}
+    {% endfor %}
+</div>

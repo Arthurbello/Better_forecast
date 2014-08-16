@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+
+    {% with cards|random as random_card %}
+    <p>
+        Suit: {{ random_card.get_suit_display}}, Rank: {{ random_card.rank}}
+    </p>
+    {% endwith %}

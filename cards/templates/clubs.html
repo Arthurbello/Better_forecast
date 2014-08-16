@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<div>
+    {% for card in cards %}
+        {% if card.suit == 1 %}
+        <p>{{ forloop.counter }}Suit: {{ card.get_suit_display }}, Rank: {{ card.rank }}</p>
+        {% endif %}
+    {% endfor %}
+</div>

@@ -1,0 +1,10 @@
+{% extends 'base_template.html' %}
+{% block content %}Your card:{{ user_cards.get_suit_display}} | ({{ user_cards.get_ranking }}){{ user_cards.rank }}<br>
+Dealer card: {{dealer_cards.get_suit_display}} | ({{ dealer_cards.get_ranking }}){{ dealer_cards.rank }}<br>
+{{ result }}
+    <FORM METHOD="link" ACTION="http://127.0.0.1:8000/war/" >
+<INPUT TYPE="submit" VALUE="play again">
+</FORM>
+    {{ h }}
+
+{% endblock content %}

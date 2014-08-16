@@ -1,0 +1,11 @@
+{% extends "base_template.html" %}
+{% load list_filters %}
+{% block title %}
+    newrpage
+{% endblock title %}
+
+{% block content %}
+    {% for card in cards|deal:5 %}
+    <p>Suit {{ card.get_suit_display }} | Rank {{ card.rank }}</p>
+    {% endfor %}
+{% endblock %}

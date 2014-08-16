@@ -1,0 +1,8 @@
+{% load list_filters %}
+{% for card in cards %}
+    {% if card.suit == 3 %}
+    <p>Suit: {{ card.get_suit_display }}, Rank: {{ card.rank }}</p>
+    {% endif %}
+{% endfor %}
+
+{% block content %}{% endblock content %}
